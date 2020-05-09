@@ -1,0 +1,7 @@
+appendEvent: function (text, year, month, day, classes) {
+    this.find(
+        '.jqyc-not-empty-td[data-day-of-month="' + day + '"].jqyc-not-empty-td[data-month="' + month + '"].jqyc-not-empty-td[data-year="' + year + '"]'
+    ).css('background-color', classes).attr('data-toggle', 'popover').attr('title', 'Popover title').attr('data-content', text);
+
+    recalcHeight();
+},
